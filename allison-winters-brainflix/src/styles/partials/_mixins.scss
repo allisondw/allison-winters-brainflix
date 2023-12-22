@@ -1,0 +1,37 @@
+@use "./variables" as *;
+@use "./mediaqueries" as *;
+
+@mixin mobile-padding-x {
+    padding-right: $px16;
+    padding-left: $px16;
+}
+
+@mixin mobile-padding-y {
+    padding-top: $px16;
+    padding-bottom: $px16;
+}
+
+@mixin sm-component-padding {
+    padding-top: $px24;
+    padding-bottom: $px16;
+}
+
+@mixin tablet-padding-x {
+    padding-right: $px32;
+    padding-left: $px32;
+}
+
+@mixin tablet-padding-y {
+    padding-top: $px24;
+    padding-bottom: $px24;
+}
+
+@mixin lg-component-padding {
+    padding-top: $px36;
+    padding-bottom: $px24;
+}
+
+@mixin desktop-padding-x {
+    padding-right: $px136;
+    padding-left: $px136;
+}

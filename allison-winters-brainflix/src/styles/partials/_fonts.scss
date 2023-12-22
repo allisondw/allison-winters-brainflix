@@ -1,0 +1,24 @@
+@use "./mixins" as *;
+@use "./variables" as *;
+
+@font-face {
+    font-family: 'avenir-regular';
+    src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+}
+
+@font-face {
+    font-family: 'avenir-bold';
+    src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+}
+
+@mixin mobile-font-reg {
+    font-family: 'avenir-regular';
+    font-size: $px12;
+    line-height: $px20;
+}
+
+@mixin mobile-font-bold {
+    font-family: 'avenir-bold';
+    font-size: $px12;
+    line-height: $px20;
+}
