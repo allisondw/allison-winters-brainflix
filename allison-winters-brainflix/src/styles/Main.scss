@@ -1,7 +1,30 @@
+@use "./partials/fonts" as *;
+@use "./partials/mediaqueries" as *;
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+
 *,
 ::before,
 ::after {
   box-sizing: border-box;
 }
 
-@import "./partials/Header.scss";
+@import "../components/Header/Header.scss";
+@import "../components/Hero/Hero.scss";
+
+main {
+  display: flex;
+  flex-direction: column;
+  &__left-column {
+    display: flex;
+    flex-direction: column;
+  }
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid $mercury;
+  }
+  @include desktop-bp {
+    flex-direction: row;
+  }
+}

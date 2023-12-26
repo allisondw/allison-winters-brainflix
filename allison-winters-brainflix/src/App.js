@@ -1,13 +1,22 @@
-import Header from "./components/Header.js";
-import Player from "./components/Player.js";
+import Header from "./components/Header/Header.js";
+import Hero from "./components/Hero/Hero.js";
 
 const App = () => {
   return (
-    <>
-    <Header />
-    <Player />
+    <body>
+        <Header />
+      <main>
+        <section className="main__left-column">
+          <Hero />
+          {/* <Comments /> */}
+        </section>
+        <section className="main__sidebar">
+          {/* <NextVideo /> */}
+        </section>
 
-    </>
+
+      </main>
+    </body>
   )
 }
 

@@ -1,6 +1,8 @@
 @use "./variables" as *;
 @use "./mediaqueries" as *;
 
+/* SPACING */
+
 @mixin mobile-padding-x {
     padding-right: $px16;
     padding-left: $px16;
@@ -34,4 +36,22 @@
 @mixin desktop-padding-x {
     padding-right: $px136;
     padding-left: $px136;
+}
+
+@mixin vid-details-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: top;
+    width: 50%;
+    border-top: 1px solid $mercury;
+    border-bottom: 1px solid $mercury;
+    
+}
+@mixin vid-details-tablet {
+    display: flex;
+    flex-direction: row;
+    border-top: none;
+    border-bottom: 1px solid $mercury;
+    align-items: baseline;
 }
