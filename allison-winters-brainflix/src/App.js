@@ -1,7 +1,7 @@
 import Header from "./components/Header/Header.js";
 import Hero from "./components/Hero/Hero.js";
 import Comments from "./components/Comments/Comments.js";
-import "../"
+import "../src/styles/Main.scss";
 
 const App = () => {
   return (

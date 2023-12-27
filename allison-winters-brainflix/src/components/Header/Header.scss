@@ -72,12 +72,13 @@
             }
         }
         &--user-pic {
-            @include user-pic;
+            @include small-user-pic;
             order: 1;
             margin-left: $px16;
             @include tablet-bp {
                 order: 2;
                 margin: 0;
+                @include large-user-pic;
             }
         }
         @include tablet-bp {

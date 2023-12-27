@@ -1,26 +1,17 @@
 import React from "react";
 import "../../styles/Main.scss";
 import userPic from "../../assets/images/Mohan-muruge.jpg";
+import commentSVG from "../../assets/images/icons/add_comment.svg";
 
 const NewComment = () => {
     return (
 
         <section class="submit-section">
-            <article class="submit-section__new-comment">
-                <h2 class="submit-section__title">Join the Conversation</h2>
-                <div class="submit-section__form-div">
-                    <img src="{userPic}" alt="user" class="submit-section__user-pic" />
-                    <form id="submit-section__form" class="submit-section__form">
-                        <label for="name-field" class="form__label">NAME</label>
-                        <input 
-                            type="text" 
-                            id="name-field" 
-                            name="name-field" 
-                            placeholder=" Enter your name"
-                            class="name-field"
-                            required
-                        />
-                        <label for="comment-field" class="form__label">COMMENT</label>
+            <div class="submit-section__div">
+                <img src={userPic} alt="user" class="submit-section__user-pic" />
+                <form id="submit-section__form" class="submit-section__form">
+                    <div className="submit-section__form-group">
+                        <label for="comment-field" class="form__label">Join the Conversation</label>                        
                         <textarea 
                             id="comment-field" 
                             name="comment-field" 
@@ -28,10 +19,10 @@ const NewComment = () => {
                             class="comment-field"
                             required>
                         </textarea>                            
-                        <button type="submit" value="COMMENT" class="button">comment</button>
-                    </form>
-                </div>                    
-            </article>    
+                    </div>
+                    <button type="submit" value="COMMENT" class="comment-button"><img src={commentSVG} alt="" className="comment-button-svg"/>COMMENT</button>
+                </form>
+            </div>                     
         </section>
     )
 }

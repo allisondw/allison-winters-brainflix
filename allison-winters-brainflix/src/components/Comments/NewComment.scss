@@ -4,11 +4,14 @@
 @use "../../styles/partials/mediaqueries" as *;
 
 .submit-section {
+    display: flex;
     margin: 0;
+    align-items: center;
     @include mobile-padding-x;
     @include mobile-padding-y;
     @include tablet-bp {
       @include tablet-padding-x;
+      width: 100%;
     }
     @include desktop-bp {
       @include desktop-padding-x;
@@ -17,71 +20,100 @@
     &__title {
       margin: 0;
     }
+    &__div {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      @include tablet-bp {
+        flex-direction: row;
+        width: 100%;
+        justify-content: space-between;
+      }
+      @include desktop-bp {
+        @include desktop-padding-x;
+      }
+    }
     &__user-pic {
-      @include user-pic;
-      margin: $px40 $px16 0 0;
+      @include small-user-pic;
+      margin: $px16 $px16 0 0 ;
+      @include tablet-bp {
+        @include large-user-pic;
+        margin: $px16 0 0 0;
+      }
     }
     &__form {
-      width: 100%;
       display: flex;
       flex-direction: column;
-      padding-bottom: $px16;
-      border-bottom: 1px solid red;
-      &-div {
+      width: 100%;
+      &-group {
         display: flex;
-        width: 100%;
-        justify-content: stretch;
+        flex-direction: column;
         @include tablet-bp {
-          @include tablet-padding-x;
+          width: calc( 100% - 196px );
         }
-        @include desktop-bp {
-          @include desktop-padding-x;
-        }
+      }
+      @include tablet-bp {
+        flex-direction: row;
+        align-items:end;
+        flex-grow: 1;
+        justify-content: space-between;
       }
     }
 }
-.button {
-    margin-top: $px24;
-}
-.name-field {
-    padding: $px12;
-    &:focus {
-      border-color: red;
-      outline: none;
-    }
-    &__validate:invalid {
-      border-color: red;
-      outline: none;
-    }
-    @include tablet-bp {
-      padding: $px16;
-    }
+.comment-button {
+  @include large-font-body;
+  height: $px40;
+  width: 100%;
+  border: none;
+  background-color: $brainflix-blue;
+  border-radius: 4px;
+  color: $white;
+  position: relative;
+  @include tablet-bp {
+    width: $px160;
+    margin-left: $px16;
+  }
+  &-svg {
+    position: absolute;
+    top: $px13;
+    left: $px13;
+    height: $px16;
+  }
+  
 }
   
 .comment-field {
-    resize: none;
-    height: $px128;
-    transition: height 0.3s ease;
-  
-    padding: $px12;
-    &:focus {
-      border-color: red;
-      outline: none;
-    }
-    &validate:invalid {
-      border-color: red;
-      outline: none;
-    }
-    @media screen and (min-width: $tablet) {
-      height: $px80;
-      padding: $px16;
-    }
+  @include small-font-body;
+  color: $brainflix-black;
+  resize: none;
+  height: $px128;
+  width: 100%;
+  transition: height 0.3s ease;
+  border: 1px solid $mercury;
+  border-radius: 4px;
+  padding: $px12 0 0 $px12;
+  margin: 0 0 $px16;
+  &:focus {
+    border: 2px solid $brainflix-blue;
+    border-radius: 4px;
+    outline: none;
+  }
+  &validate:invalid {
+    border-color: red;
+    outline: none;
+  }
+  @include tablet-bp {
+    height: $px40;
+    margin: 0 $px16;
+    padding: $px10;
+    flex-grow: 1;
+  }
 }
   
 .form__label {
-   
-    padding-top: $px24;
-    @include tablet-bp {
-      
-    }
+  @include small-font-form-title;
+  font-weight: bold;
+  @include tablet-bp {
+    padding: 0 $px16;
+  }
 }

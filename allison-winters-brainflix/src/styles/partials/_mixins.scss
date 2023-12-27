@@ -56,7 +56,14 @@
     align-items: baseline;
 }
 
-@mixin user-pic {
+@mixin small-user-pic {
+    border-radius: 50%;
+    width: $px36;
+    height: $px36;
+    background-color: $mercury;
+}
+
+@mixin large-user-pic {
     border-radius: 50%;
     width: $px40;
     height: $px40;

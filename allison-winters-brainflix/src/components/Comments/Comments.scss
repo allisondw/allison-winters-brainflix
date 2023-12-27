@@ -13,7 +13,10 @@
         padding: $px16;
     }
     &--user-img {
-        @include user-pic;
+        @include small-user-pic;
+        @include tablet-bp {
+            @include large-user-pic;
+        }
     }
     &--top {
         display: flex;
