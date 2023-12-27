@@ -1,5 +1,7 @@
 import Header from "./components/Header/Header.js";
 import Hero from "./components/Hero/Hero.js";
+import Comments from "./components/Comments/Comments.js";
+import "../"
 
 const App = () => {
   return (
@@ -8,7 +10,7 @@ const App = () => {
       <main>
         <section className="main__left-column">
           <Hero />
-          {/* <Comments /> */}
+          <Comments />
         </section>
         <section className="main__sidebar">
           {/* <NextVideo /> */}
