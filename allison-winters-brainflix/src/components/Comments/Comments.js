@@ -1,15 +1,18 @@
 import React from "react";
 import "../../styles/Main.scss";
-import videoDetailsData from "../../data/video-details.json";
-import { useState } from 'react';
 import NewComment from "./NewComment.js";
 import UserComments from "./UserComments.js";
+import CommentsHead from "./CommentsHead.js";
 
-const Comments = () => {
+const Comments = ( {videoData }) => {
+
     return (
         <>
+            <CommentsHead 
+            commentsCount = {videoData.comments.length}
+            />
             <NewComment />
-            <UserComments />
+            <UserComments comments = {videoData.comments}/>
         </>
     )
 }
