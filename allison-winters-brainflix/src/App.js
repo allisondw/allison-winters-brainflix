@@ -22,6 +22,7 @@ const App = () => {
         <Header />
       <main>
         <Hero videoData = {videoData} />
+        
         <section className="main__left-column">
           <Comments videoData = {videoData} />
         </section>
