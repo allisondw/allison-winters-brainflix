@@ -7,6 +7,10 @@
     padding-right: $px16;
     padding-left: $px16;
 }
+@mixin mobile-margin-x {
+    margin-right: $px16;
+    margin-left: $px16;
+}
 
 @mixin mobile-padding-y {
     padding-top: $px16;
@@ -23,6 +27,11 @@
     padding-left: $px32;
 }
 
+@mixin tablet-margin-x {
+    margin-right: $px32; 
+    margin-left: $px32;
+}
+
 @mixin tablet-padding-y {
     padding-top: $px24;
     padding-bottom: $px24;
@@ -36,6 +45,11 @@
 @mixin desktop-padding-x {
     padding-right: $px136;
     padding-left: $px136;
+}
+
+@mixin desktop-margin-x {
+    margin-right: $px136;
+    margin-left: $px136;
 }
 
 @mixin vid-details-mobile {

@@ -1,0 +1,58 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mediaqueries" as *;
+
+
+.comments {
+    @include mobile-margin-x;
+    &__posted {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &--card {
+        width: 100%;
+        display: flex;
+        border-top: 1px solid $mercury;
+        padding: $px16;
+        justify-content: center;
+        @include tablet-bp {
+            margin: 0;
+        }
+      }
+      &--user-img {
+        @include small-user-pic;
+        @include tablet-bp {
+          @include large-user-pic;
+        }
+      }
+      &--top {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding-left: $px16;
+      }
+      &--name {
+        @include small-font-sub;
+        justify-content: left;
+        width: 50%;
+      }
+      &--date {
+        @include small-font-sec;
+        width: auto;
+        padding: 0;
+        justify-content: right;
+      }
+      &--body {
+        @include small-font-body;
+        width: auto;
+        padding: $px8 0 0 $px16;
+      }
+    }
+    @include tablet-bp {
+        @include tablet-margin-x;
+    }
+    @include desktop-bp {
+        @include desktop-margin-x;
+    }
+}

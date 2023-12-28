@@ -3,6 +3,15 @@ import "../../styles/Main.scss";
 import videoDetailsData from "../../data/video-details.json";
 import { useState } from 'react';
 
+const formatDate = (timestamp) => {
+    const date = new Date(timestamp);
+    return date.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+    });
+};
+
 const UserComments = () => {
 
     const [commentsData, setCommentsData] = useState(videoDetailsData[0]);
@@ -12,7 +21,7 @@ const UserComments = () => {
     const PostedComment = comments.map((comment) => {
         const name = comment.name;
         const body = comment.comment;
-        const date = comment.timestamp;
+        const date = formatDate(comment.timestamp);
         return (
             <section className="comments__posted">
                 <article className="comments__posted--card">
