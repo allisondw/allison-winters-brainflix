@@ -1,11 +1,11 @@
-@use "./mixins" as *;
-@use "./variables" as *;
-@use "./fonts" as *;
-@use "./mediaqueries" as *;
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mediaqueries" as *;
 
 .header {
     width: 100%;
-    padding: $px16;;
+    padding: $px16;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -35,13 +35,13 @@
             border-color: #E1E1E1;
             border: 1px solid $mercury;
             background-image: url("../../assets/images/icons/search.svg");
-            background-position: $px10 $px12;
+            background-position: $px10;
             background-repeat: no-repeat;
             padding: $px8 $px20 $px8 $px40;
             margin: $px16 0;
             order: 0;
             flex-grow: 1;
-            @include mobile-font-reg;
+            @include small-font-body;
             color: $brainflix-black;
             @include tablet-bp {
                 width: 15rem;
@@ -49,7 +49,7 @@
             }
         }
         &--upload-btn {
-            @include mobile-font-bold;
+            @include small-font-label;
             width: 100%;
             height: $px40;
             background-color: $brainflix-blue;
@@ -72,14 +72,13 @@
             }
         }
         &--user-pic {
-            border-radius: 50%;
-            width: $px40;
-            height: $px40;
+            @include small-user-pic;
             order: 1;
             margin-left: $px16;
             @include tablet-bp {
                 order: 2;
                 margin: 0;
+                @include large-user-pic;
             }
         }
         @include tablet-bp {
@@ -91,6 +90,7 @@
         flex-direction: row;
         justify-content: space-between;
         padding-top: 0;
+        padding-bottom: 0;
         @include tablet-padding-x;
     }
     @include desktop-bp {

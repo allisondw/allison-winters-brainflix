@@ -49,6 +49,14 @@
     color: $silver;
 }
 
+@mixin small-font-form-title {
+    @include font-bold;
+    font-size: $px12;
+    line-height: $px20;
+    text-transform: uppercase;
+    color: $silver;
+}
+
 @mixin small-font-body {
     @include font-reg;
     font-size: $px13;
