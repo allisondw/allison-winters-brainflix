@@ -29,7 +29,7 @@ const Hero = () => {
     return (
         <section className="hero">
             <div className="hero__video-container">
-                <video className="hero__video" controls poster={image}></video>
+                <video className="hero__video" controls poster={image} />
             </div>
             <div className="hero__details">
                 <h1 className="hero__details--title">{title}</h1>
@@ -39,8 +39,8 @@ const Hero = () => {
                         <span className="hero__details-div--timestamp">{formatTimestamp(timestamp)}</span>
                     </div>
                     <div className="hero__details-div--right">
-                        <span className="hero__details-div--views"><img src={viewsSVG} className="hero__details-div--views-svg"/> {views}</span>
-                        <span className="hero__details-div--likes"><img src={likesSVG} className="hero__details-div--likes-svg"/>{likes}</span>
+                        <span className="hero__details-div--views"><img src={viewsSVG} className="hero__details-div--views-svg" alt=""/> {views}</span>
+                        <span className="hero__details-div--likes"><img src={likesSVG} className="hero__details-div--likes-svg" alt=""/>{likes}</span>
                     </div>
                 </article>
                 <p className="hero__details--description">{description}</p>
