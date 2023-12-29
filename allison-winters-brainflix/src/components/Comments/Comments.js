@@ -5,11 +5,11 @@ import UserComments from "./UserComments.js";
 import CommentsHead from "./CommentsHead.js";
 
 const Comments = ( {videoData }) => {
-
+    const numVidComments = videoData.comments.length;
     return (
         <>
             <CommentsHead 
-            commentsCount = {videoData.comments.length}
+            commentsCount = {numVidComments}
             />
             <NewComment />
             <UserComments comments = {videoData.comments}/>
