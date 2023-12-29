@@ -10,10 +10,7 @@ import { useEffect } from 'react';
 
 const App = () => {
 
-
-
   const [videoData, setVideoData] = useState(videoDetailsData[0]);
-
 
   const handleVideoChange = ((newVideoID) => {
     console.log('Selected Video ID:', newVideoID);
@@ -35,9 +32,9 @@ const App = () => {
     <body>
         <Header />
       <main>
-        
-        <section className="main__left-column">
         <Hero videoData = {videoData} />
+        <section className="main__left-column">
+       {/* <About videoData = {videoData} /> */}
         <Comments videoData = {videoData} />
         </section>
         <section className="main__sidebar">
