@@ -8,6 +8,7 @@
     @include small-font-sub;
     @include mobile-padding-x;
     @include tablet-bp {
+        @include large-font-sub;
         @include tablet-padding-x;
         margin-top: $px24;
     }

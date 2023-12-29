@@ -10,49 +10,73 @@
       display: flex;
       flex-direction: column;
       align-items: center;
+
       &--card {
         width: 100%;
         display: flex;
         border-top: 1px solid $mercury;
         padding: $px16;
-        justify-content: center;
+        justify-content: left;
+        position: relative;
         @include tablet-bp {
-            margin: 0;
+            padding: $px16 0;
         }
       }
       &--user-img {
         @include small-user-pic;
         @include tablet-bp {
           @include large-user-pic;
+          margin-left: $px16;
+        }
+        @include desktop-bp {
+     
         }
       }
       &--top {
         display: flex;
         justify-content: space-between;
-        width: 100%;
+
         padding-left: $px16;
       }
       &--name {
         @include small-font-sub;
         justify-content: left;
-        width: 50%;
+        flex-grow: 1;
       }
       &--date {
         @include small-font-sec;
         width: auto;
         padding: 0;
         justify-content: right;
+        @include tablet-bp {
+          position: absolute;
+          top: $px16;
+          right: 0;
+        }
+        @include desktop-bp {
+          margin-right: $px16;
+          align-content: right;
+          
+        }
       }
       &--body {
         @include small-font-body;
         width: auto;
         padding: $px8 0 0 $px16;
+        @include tablet-bp {
+          @include large-font-body;
+        }
+        @include desktop-bp {
+         padding-right: $px16;
+        }
       }
+      
     }
     @include tablet-bp {
         @include tablet-margin-x;
     }
     @include desktop-bp {
-        @include desktop-margin-x;
+        padding: 0 0 0 $px136;
+        margin: 0;
     }
 }
