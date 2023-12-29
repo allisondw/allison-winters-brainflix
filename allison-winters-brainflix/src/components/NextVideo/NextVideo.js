@@ -10,7 +10,10 @@ const NextVideo = ({ videos, onVideoSelect }) => {
                 <article 
                     className="videos__item"
                     key = {video.id}
-                    onClick = {() => onVideoSelect(video.id)}>
+                    onClick = {() => {
+                        console.log('Video ID:', video.id);
+                        onVideoSelect(video.id)}
+                    }>
                     <div className="videos__item--thumbnail"><img src={video.image} alt={video.title} className="videos__item--thumbnail-img"/></div>
                     <div className="videos__item--body">
                         <p className="videos__item--body-title">{video.title}</p>    

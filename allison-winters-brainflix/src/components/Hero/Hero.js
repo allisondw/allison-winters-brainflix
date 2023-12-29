@@ -6,9 +6,7 @@ import viewsSVG from "../../assets/images/icons/views.svg";
 import likesSVG from "../../assets/images/icons/likes.svg";
 
 
-const Hero = () => {
-
-    const [videoData, setVideoData] = useState(videoDetailsData[0]);
+const Hero = ({videoData}) => {
 
     const {
         id,
@@ -20,6 +18,8 @@ const Hero = () => {
         likes,
         timestamp
     } = videoData;
+
+    console.log('Hero videoData:', videoData);
 
     const formatTimestamp = (timestamp) => {
         const dateFormat = { year: 'numeric', month: '2-digit', day: '2-digit' };
