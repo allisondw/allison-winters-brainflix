@@ -15,8 +15,13 @@
 @import "../components/Comments/CommentsHead.scss";
 @import "../components/Comments/UserComments.scss";
 @import "../components/NextVideo/NextVideo.scss";
+@import "../components/About/About.scss";
 
 main {
+  display: flex;
+  flex-direction: column;
+}
+.main-below {
   display: flex;
   flex-direction: column;
   &__left-column {
@@ -26,7 +31,9 @@ main {
   &__sidebar {
     display: flex;
     flex-direction: column;
-    border-left: 1px solid $mercury;
+    @include desktop-bp {
+      
+    }
   }
   @include desktop-bp {
     flex-direction: row;

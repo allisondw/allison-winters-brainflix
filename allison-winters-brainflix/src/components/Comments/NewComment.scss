@@ -9,13 +9,7 @@
   align-items: center;
   @include mobile-padding-x;
   @include mobile-padding-y;
-  @include tablet-bp {
-    @include tablet-padding-x;
-    width: 100%;
-  }
-  @include desktop-bp {
-    @include desktop-padding-x;
-  }
+  
 
   &__title {
     margin: 0;
@@ -111,6 +105,13 @@
     @include desktop-bp {
       padding-left: $px32;
     }
+  }
+  @include tablet-bp {
+    @include tablet-padding-x;
+    width: 100%;
+  }
+  @include desktop-bp {
+    padding: $px16 $px16 $px16 $px136;
   }
 }
 
