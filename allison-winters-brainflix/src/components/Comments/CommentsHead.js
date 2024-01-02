@@ -10,8 +10,3 @@ const CommentsHead = ({commentsCount}) => {
 }
 
 export default CommentsHead;
-
-
-// numOfComments = object.comments.length 
-// (happens after comment has been submitted for the count to be updated)
-// needs to be able to reference video held in state, object id
