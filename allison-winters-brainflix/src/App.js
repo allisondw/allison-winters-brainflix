@@ -7,6 +7,7 @@ import Hero from "./components/Hero/Hero.js";
 import About from "./components/About/About.js";
 import Comments from "./components/Comments/Comments.js";
 import NextVideo from "./components/NextVideo/NextVideo.js";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => {
 
