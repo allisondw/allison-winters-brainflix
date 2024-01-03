@@ -47,7 +47,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 // }
 // export default App;
 
-
 const App = () => {
   const [videoData, setVideoData] = useState(videoDetailsData[0]);
   return (
