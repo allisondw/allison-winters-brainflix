@@ -1,12 +1,12 @@
-import "../src/styles/Main.scss";
+import "../styles/Main.scss";
 import { useState } from 'react';
-import videoDetailsData from "../src/data/video-details.json"
-import videosList from "../src/data/videos.json";
-import Header from "./components/Header/Header.js";
-import Hero from "./components/Hero/Hero.js";
-import About from "./components/About/About.js";
-import Comments from "./components/Comments/Comments.js";
-import NextVideo from "./components/NextVideo/NextVideo.js";
+import videoDetailsData from "../data/video-details.json"
+import videosList from "../data/videos.json";
+import Header from "../components/Header/Header.js";
+import Hero from "../components/Hero/Hero.js";
+import About from "../components/About/About.js";
+import Comments from "../components/Comments/Comments.js";
+import NextVideo from "../components/NextVideo/NextVideo.js";
 
 const HomePage = () => {
 
@@ -23,7 +23,7 @@ const HomePage = () => {
 
   const filteredVideos = videosList.filter((video) => video.id !== videoData.id);
   return (
-    <body>
+    <section>
         <Header />
       <main>
         <Hero videoData = {videoData} />
@@ -39,7 +39,7 @@ const HomePage = () => {
           </article>
         </section>
       </main>
-    </body>
+    </section>
   )
 }
 export default HomePage;

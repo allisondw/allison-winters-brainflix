@@ -1,12 +1,7 @@
 import "../src/styles/Main.scss";
 import { useState } from 'react';
 import videoDetailsData from "../src/data/video-details.json"
-import videosList from "../src/data/videos.json";
-import Header from "./components/Header/Header.js";
-import Hero from "./components/Hero/Hero.js";
-import About from "./components/About/About.js";
-import Comments from "./components/Comments/Comments.js";
-import NextVideo from "./components/NextVideo/NextVideo.js";
+
 import HomePage from "./pages/HomePage.js";
 import VideoUploadPage from "./pages/VideoUploadPage.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -59,3 +54,5 @@ const App = () => {
     </BrowserRouter>
   )
 }
+
+export default App;
