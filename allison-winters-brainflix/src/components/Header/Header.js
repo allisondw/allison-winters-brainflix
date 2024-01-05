@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const Header = () => {
     return (
         <header className="header">
-            <a href="#" className="header__logo--link"><img src={Logo} alt="Brainflix Logo" className="header__logo--img" /></a>
+            <Link to="/"><img src={Logo} alt="Brainflix Logo" className="header__logo--img" /></Link>
             <div className="header__div">
                 <div className="header__div--form-div">
                     <form>
