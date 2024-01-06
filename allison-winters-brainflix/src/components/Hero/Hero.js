@@ -4,6 +4,7 @@ import "../../styles/Main.scss";
 const Hero = ({videoData}) => {
 
     const { image } = videoData;
+    console.log(videoData);
 
     return (
         <section className="hero">
