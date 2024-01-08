@@ -18,6 +18,10 @@
         align-items: flex-start;
         margin-top: $px16;
         height: $px70;
+        &-link {
+            text-decoration: none;
+            color: $brainflix-black;
+        }
         &--thumbnail {
             width: $px112;
             height: 100%;

@@ -1,6 +1,12 @@
+import Header from "../components/Header/Header.js";
+import VideoUpload from "../components/VideoUpload/VideoUpload.js";
+
 const VideoUploadPage = () => {
     return (
-        <div>upload</div>
+        <>
+            <Header />
+            <VideoUpload />
+        </>
     )
 }
 

@@ -4,7 +4,7 @@ import viewsSVG from "../../assets/images/icons/views.svg";
 import likesSVG from "../../assets/images/icons/likes.svg";
 
 
-const About = ({videoData}) => {
+const About = ({ videoData }) => {
 
     const formatTimestamp = (timestamp) => {
         const dateFormat = { year: 'numeric', month: '2-digit', day: '2-digit' };
@@ -12,8 +12,6 @@ const About = ({videoData}) => {
     };
 
     const {
-        id,
-        image, 
         title,
         channel,
         description,
