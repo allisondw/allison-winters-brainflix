@@ -11,8 +11,13 @@
     align-items: center;
 
     &__logo {
-        max-width: $px160;;
+        max-width: $px160;
         padding: $px16 0;
+        
+    }
+    &__link--upload {
+        text-decoration: none;
+        color: $white;  
     }
 
     &__div {
@@ -54,6 +59,7 @@
             height: $px40;
             background-color: $brainflix-blue;
             color: $white;
+            text-decoration: none;
             border-radius: $px4;
             border-style: none;
             position: relative;

@@ -69,6 +69,7 @@
   .comment-field {
     @include small-font-body;
     color: $brainflix-black;
+    background-color: $form-bg-color;
     resize: none;
     height: $px128;
     width: auto;

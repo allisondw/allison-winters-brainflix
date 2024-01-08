@@ -1,26 +1,45 @@
 @use "./mixins" as *;
 @use "./variables" as *;
 
+
 @font-face {
-    font-family: 'avenir-regular';
+    font-family: 'Avenir';
     src: url("../../assets/fonts/AvenirNextLTPro-Regular.otf");
+    font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'avenir-bold';
+    font-family: 'Avenir';
+    src: url("../../assets/fonts/AvenirNextLTPro-Demi.otf");
+    font-weight: 400; 
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir';
     src: url("../../assets/fonts/AvenirNextLTPro-Bold.otf");
+    font-weight: bold;
+    font-style: normal;
 }
 
 @mixin font-reg {
-    font-family: 'avenir-regular';
+    font-family: 'Avenir', sans-serif;
+    font-weight: 300;
 }
 
 @mixin font-bold {
-    font-family: 'avenir-bold';
+    font-family: 'Avenir', sans-serif;
+    font-weight: bold;
+}
+
+@mixin font-demi {
+    font-family: 'Avenir', sans-serif;
+    font-weight: 400; 
 }
 
 @mixin small-font-header {
-    @include font-bold;
+    @include font-demi;
     font-size: $px24;
     line-height: $px32;
 }
@@ -33,12 +52,13 @@
 
 @mixin small-font-label {
     @include font-bold;
+    text-transform: uppercase;
     font-size: $px12;
     line-height: $px20;
 }
 
 @mixin small-font-sub {
-    @include font-bold;
+    @include font-demi;
     font-size: $px13;
     line-height: $px18;
 }
@@ -50,7 +70,7 @@
 }
 
 @mixin small-font-form-title {
-    @include font-bold;
+    @include font-demi;
     font-size: $px12;
     line-height: $px20;
     text-transform: uppercase;
@@ -70,7 +90,7 @@
 }
 
 @mixin large-font-sub {
-    @include font-bold;
+    @include font-demi;
     font-size: $px14;
     line-height: $px22;
 }
