@@ -21,7 +21,7 @@
     }
     &__section {
         display: flex;
-        flex-direction: column; //body and buttons, column at every size
+        flex-direction: column;
         border-top: 1px solid transparent;
         margin: 0 $px16 0;
         @include tablet-bp {
@@ -34,7 +34,7 @@
     }
     &__body {
         display: flex;
-        flex-direction: column; //thumbnail and form, moves to row in desktop
+        flex-direction: column;
         &--thumbnail-img {
             width: 100%;
             border-radius: $px4;
