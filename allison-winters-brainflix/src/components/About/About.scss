@@ -11,6 +11,7 @@
             @include small-font-header;
             @include tablet-bp {
                 @include large-font-header;
+                margin-top: $px24;
                 margin-bottom: 0;
             }
             @include desktop-bp {
