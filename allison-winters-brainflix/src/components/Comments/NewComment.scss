@@ -85,7 +85,7 @@
       outline: none;
     }
     &validate:invalid {
-      border-color: red;
+      border-color: $error-state;
       outline: none;
     }
     @include tablet-bp {
