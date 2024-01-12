@@ -1,0 +1,43 @@
+@use "./partials/fonts" as *;
+@use "./partials/mediaqueries" as *;
+@use "./partials/mixins" as *;
+@use "./partials/variables" as *;
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+@import "../components/Header/Header.scss";
+@import "../components/Hero/Hero.scss";
+@import "../components/Comments/NewComment.scss";
+@import "../components/Comments/CommentsHead.scss";
+@import "../components/Comments/UserComments.scss";
+@import "../components/Comments/Comments.scss";
+@import "../components/NextVideo/NextVideo.scss";
+@import "../components/About/About.scss";
+@import "../components/VideoUpload/VideoUpload.scss";
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+.main-below {
+  display: flex;
+  flex-direction: column;
+  &__left-column {
+    display: flex;
+    flex-direction: column;
+  }
+  &__sidebar {
+    display: flex;
+    flex-direction: column;
+    @include desktop-bp {
+      
+    }
+  }
+  @include desktop-bp {
+    flex-direction: row;
+  }
+}

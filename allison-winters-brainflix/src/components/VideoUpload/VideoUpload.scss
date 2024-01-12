@@ -1,0 +1,180 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mediaqueries" as *;
+
+.upload {
+    &__title {
+        @include small-font-header;
+        @include mobile-padding-x;
+        @include sm-component-padding;
+        margin: 0;
+        border-top: 1px solid $mercury;
+        @include tablet-bp {
+            @include tablet-padding-x;
+            @include large-font-header;
+            @include tablet-padding-y;
+        }
+        @include desktop-bp {
+            @include desktop-padding-x;
+        }
+    }
+    &__section {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid transparent;
+        margin: 0 $px16 0;
+        @include tablet-bp {
+            border-top: 1px solid $mercury;
+            margin: 0 $px32 0;
+        }
+        @include desktop-bp {
+            margin: 0 $px136 0;
+        }
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        &--thumbnail-img {
+            width: 100%;
+            border-radius: $px4;
+            background-color: $mercury;
+            @include tablet-bp {
+                width: 50%;
+            }
+            @include desktop-bp {
+                width: auto;
+                height: $px192;
+            }
+        }
+        &--header {
+            margin: 0 0 $px4;
+            @include small-font-form-title;
+            @include tablet-bp {
+                margin: $px24 0 $px4;
+            }            
+        }
+        &--form {
+            display: flex;
+            flex-direction: column;
+            @include desktop-bp {
+                width: 100%;
+                margin-left: $px24;
+            }
+        }
+        &--label {
+            @include small-font-form-title;
+            margin-top: $px16;
+            @include desktop-bp {
+                margin: $px24 0 $px4;
+            }
+        }
+        &--title {
+            @include small-font-body;
+            color: $brainflix-dkblack;
+            background-color: $form-bg-color;
+            border: 1px solid $mercury;
+            border-radius: 4px;
+            padding: $px10 $px12;
+            margin: 0;
+            flex-grow: 1;
+            @include tablet-bp {
+                @include large-font-body;
+                padding: $px12;
+            }
+        }
+        &--description {
+            @include small-font-body;
+            color: $brainflix-dkblack;
+            background-color: $form-bg-color;
+            resize: none;
+            height: $px128;
+            width: auto;
+            transition: height 0.3s ease;
+            border: 1px solid $mercury;
+            border-radius: 4px;
+            padding: $px12 0 0 $px12;
+            margin: 0 0 $px16;
+            flex-grow: 1;
+            @include tablet-bp {
+                @include large-font-body;
+                margin: 0 0 $px24;
+            }
+            @include desktop-bp {
+                padding-bottom: 0;
+                height: $px96;
+            }
+        }
+        &--top {
+            @include desktop-bp {
+                width: 50%;
+            }
+        }
+        @include desktop-bp {
+            flex-direction: row;
+            max-height: 25rem;
+            align-items: first baseline;
+        }      
+    }
+    &__button {
+        display: flex;
+        flex-direction: column;
+        border-top: 1px solid transparent;
+        position: relative;
+        &--publish {
+            margin: $px16 0;
+            @include small-font-label;
+            width: auto;
+            height: $px40;
+            background-color: $brainflix-blue;
+            color: $white;
+            border-radius: $px4;
+            border-style: none;
+            position: relative;
+            .upload-btn-svg {
+                position: absolute;
+                top: $px8;
+                left: $px8;
+            }
+            &-link {
+                text-decoration: none;
+                color: $white;
+            }
+            @include tablet-bp {
+                width: $px160;
+                order: 2;
+            }
+        }
+        &--cancel {
+            margin: $px8 0 $px24;
+            border: none;
+            background-color: transparent;
+            color: $brainflix-blue;
+            @include small-font-label;
+            @include tablet-bp {
+                width: $px160;
+                padding-top: $px16;
+                order: 1;
+                margin-right: $px16;
+            }
+        }
+        @include tablet-bp {
+            flex-direction: row;
+            border-top: 1px solid $mercury;
+            justify-content: flex-end;
+        }
+    }
+    &__success-message {
+        @include small-font-sub;
+        color: $brainflix-black;
+        padding-top: $px24;
+        margin: auto;
+        @include tablet-bp {
+            @include large-font-sub;
+            margin: 0;
+            position: absolute;
+            left: $px4;
+            top: $px4;
+        }
+    }  
+}
