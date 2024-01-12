@@ -20,7 +20,7 @@ const UserComments = ({ comments }) => {
         <article className="comments__posted--card">
           <div className="comments__posted--left">
             <div className="comments__posted--user-img">
-              <img src="/" alt=""></img>
+              <img src="/" alt="user profile image"></img>
             </div>
           </div>
           <div className="comments__posted--right">

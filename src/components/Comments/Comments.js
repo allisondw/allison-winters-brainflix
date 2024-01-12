@@ -1,8 +1,8 @@
 import React from "react";
 import "../../styles/Main.scss";
-import NewComment from "./NewComment.js";
-import UserComments from "./UserComments.js";
-import CommentsHead from "./CommentsHead.js";
+import NewComment from "../NewComment/NewComment.js";
+import UserComments from "../UserComments/UserComments.js";
+import CommentsHead from "../CommentsHead/CommentsHead.js";
 
 const Comments = ( {videoData }) => {
     const numVidComments = videoData.comments.length;
