@@ -1,6 +1,6 @@
 import "../src/styles/Main.scss";
-import HomePage from "./pages/HomePage.js";
-import VideoUploadPage from "./pages/VideoUploadPage.js";
+import HomePage from "./pages/HomePage/HomePage.js";
+import VideoUploadPage from "./pages/VideoUploadPage/VideoUploadPage.js";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 
