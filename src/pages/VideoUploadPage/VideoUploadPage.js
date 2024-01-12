@@ -1,5 +1,5 @@
-import Header from "../components/Header/Header.js";
-import VideoUpload from "../components/VideoUpload/VideoUpload.js";
+import Header from "../../components/Header/Header.js";
+import VideoUpload from "../../components/VideoUpload/VideoUpload.js";
 
 const VideoUploadPage = () => {
     return (
