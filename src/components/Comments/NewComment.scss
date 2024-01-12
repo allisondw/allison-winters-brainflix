@@ -1,0 +1,118 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/fonts" as *;
+@use "../../styles/partials/mediaqueries" as *;
+
+.submit-section {
+  display: flex;
+  margin: 0;
+  align-items: center;
+  @include mobile-padding-x;
+  @include mobile-padding-y;
+  
+
+  &__title {
+    margin: 0;
+  }
+  &__div {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  &__user-pic {
+    @include small-user-pic;
+    margin: $px16 $px16 0 0;
+    @include tablet-bp {
+      @include large-user-pic;
+      margin: $px16 0 0 $px16;
+    }
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    &-group {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      flex-shrink: 1;
+      @include tablet-bp {
+        width: 100%;
+      }
+    }
+    @include tablet-bp {
+      flex-direction: row;
+      align-items: end;
+      justify-content: space-between;
+    }
+  }
+  .comment-button {
+    @include large-font-body;
+    height: $px40;
+    width: 100%;
+    border: none;
+    background-color: $brainflix-blue;
+    border-radius: 4px;
+    color: $white;
+    position: relative;
+    @include tablet-bp {
+      width: $px160;
+      flex-shrink: 0;
+    }
+    &-svg {
+      position: absolute;
+      top: $px13;
+      left: $px13;
+      height: $px16;
+    }
+  }
+  .comment-field {
+    @include small-font-body;
+    color: $brainflix-black;
+    background-color: $form-bg-color;
+    resize: none;
+    height: $px128;
+    width: auto;
+    transition: height 0.3s ease;
+    border: 1px solid $mercury;
+    border-radius: 4px;
+    padding: $px12 0 0 $px12;
+    margin: 0 0 $px16;
+    flex-grow: 1;
+    &:focus {
+      border: 2px solid $brainflix-blue;
+      border-radius: 4px;
+      outline: none;
+    }
+    &validate:invalid {
+      border-color: $error-state;
+      outline: none;
+    }
+    @include tablet-bp {
+      height: $px40;
+      margin: 0 $px24;
+      padding: $px10;
+    }
+    @include desktop-bp {
+      margin: 0 $px32;
+    }
+  }
+  
+  .form__label {
+    @include small-font-form-title;
+    @include tablet-bp {
+      padding: 0 $px24;
+    }
+    @include desktop-bp {
+      padding-left: $px32;
+    }
+  }
+  @include tablet-bp {
+    @include tablet-padding-x;
+    width: 100%;
+  }
+  @include desktop-bp {
+    padding: $px16 $px16 $px16 $px136;
+  }
+}
+
