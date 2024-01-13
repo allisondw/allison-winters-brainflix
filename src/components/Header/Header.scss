@@ -27,69 +27,70 @@
         width: 100%;
         justify-content: space-between;
         align-items: center;
-        &--form-div {
-            flex-basis: calc(100% - $px64);
-            @include tablet-bp {
-                flex-basis: auto;
-            }
-        }
-        &--search {
-            width: 100%;
-            height: $px40;
-            border-radius: $px4;
-            border-color: #E1E1E1;
-            border: 1px solid $mercury;
-            background-image: url("../../assets/images/icons/search.svg");
-            background-position: $px10;
-            background-repeat: no-repeat;
-            padding: $px8 $px20 $px8 $px40;
-            margin: $px16 0;
-            order: 0;
-            flex-grow: 1;
-            @include small-font-body;
-            color: $brainflix-black;
-            @include tablet-bp {
-                width: 15rem;
-                margin-right: $px24;
-            }
-        }
-        &--upload-btn {
-            @include small-font-label;
-            width: 100%;
-            height: $px40;
-            background-color: $brainflix-blue;
-            color: $white;
-            text-decoration: none;
-            border-radius: $px4;
-            border-style: none;
-            position: relative;
-            order: 2;
-            .upload-btn-svg {
-                position: absolute;
-                top: $px8;
-                left: $px8;
-    
-            }
-            @include tablet-bp {
-                order: 1;
-                @include tablet-padding-x;
-                margin-right: $px24;
-                width: 10rem;
-            }
-        }
-        &--user-pic {
-            @include small-user-pic;
-            order: 1;
-            margin-left: $px16;
-            @include tablet-bp {
-                order: 2;
-                margin: 0;
-                @include large-user-pic;
-            }
-        }
+        
         @include tablet-bp {
             flex-wrap: nowrap;
             justify-content: right;
+        }
+    }
+    &__form-div {
+        flex-basis: calc(100% - $px64);
+        @include tablet-bp {
+            flex-basis: auto;
+        }
+    }
+    &__search {
+        width: 100%;
+        height: $px40;
+        border-radius: $px4;
+        border-color: #E1E1E1;
+        border: 1px solid $mercury;
+        background-image: url("../../assets/images/icons/search.svg");
+        background-position: $px10;
+        background-repeat: no-repeat;
+        padding: $px8 $px20 $px8 $px40;
+        margin: $px16 0;
+        order: 0;
+        flex-grow: 1;
+        @include small-font-body;
+        color: $brainflix-black;
+        @include tablet-bp {
+            width: 15rem;
+            margin-right: $px24;
+        }
+    }
+    &__upload-btn {
+        @include small-font-label;
+        width: 100%;
+        height: $px40;
+        background-color: $brainflix-blue;
+        color: $white;
+        text-decoration: none;
+        border-radius: $px4;
+        border-style: none;
+        position: relative;
+        order: 2;
+        .upload-btn-svg {
+            position: absolute;
+            top: $px8;
+            left: $px8;
+
+        }
+        @include tablet-bp {
+            order: 1;
+            @include tablet-padding-x;
+            margin-right: $px24;
+            width: 10rem;
+        }
+    }
+    &__user-pic {
+        @include small-user-pic;
+        order: 1;
+        margin-left: $px16;
+        @include tablet-bp {
+            order: 2;
+            margin: 0;
+            @include large-user-pic;
         }
     }
     @include tablet-bp {
@@ -103,3 +104,115 @@
         @include desktop-padding-x;           
     }
 }
+
+// .header {
+//     width: 100%;
+//     padding: $px16;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     &__logo {
+//         max-width: $px160;
+//         padding: $px16 0;
+//     }
+
+//     &__link--upload {
+//         text-decoration: none;
+//         color: $white;  
+//     }
+
+//     &__div {
+//         display: flex;
+//         flex-direction: column; // Change to column for mobile view
+//         width: 100%;
+//         align-items: center; // Center the children
+
+//         &__form-div { // Changed from &--form-div to &__form-div
+//             width: 100%; // Take full width in mobile
+//             order: 0; // Reset order for mobile view
+//         }
+
+//         &__search { // Changed from &--search to &__search
+//             width: 100%;
+//             height: $px40;
+//             border-radius: $px4;
+//             border-color: #E1E1E1;
+//             border: 1px solid $mercury;
+//             background-image: url("../../assets/images/icons/search.svg");
+//             background-position: $px10;
+//             background-repeat: no-repeat;
+//             padding: $px8 $px20 $px8 $px40;
+//             margin-bottom: $px16; // Add margin at the bottom
+//             flex-grow: 1;
+//             @include small-font-body;
+//             color: $brainflix-black;
+//         }
+
+//         &__upload-btn { // Changed from &--upload-btn to &__upload-btn
+//             width: 100%; // Take full width in mobile
+//             height: $px40;
+//             background-color: $brainflix-blue;
+//             color: $white;
+//             text-decoration: none;
+//             border-radius: $px4;
+//             border-style: none;
+//             position: relative;
+//             order: 1; // Make sure this comes after the search bar in mobile view
+//             cursor: pointer;
+//             .upload-btn-svg {
+//                 position: absolute;
+//                 top: $px8;
+//                 left: $px8;
+//             }
+//         }
+
+//         &__user-pic { // Changed from &--user-pic to &__user-pic
+//             order: -1; // Bring it to the first in mobile view
+//             margin-left: $px16;
+//             align-self: flex-start; // Align to start in mobile view
+//             @include small-user-pic;
+//         }
+
+//         @include tablet-bp {
+//             flex-direction: row; // Change back to row for tablet and above
+//             justify-content: space-between;
+//             flex-wrap: nowrap; // Remove wrap for tablet and above
+
+//             &__form-div {
+//                 flex-basis: auto;
+//                 order: 1; // Order changed for tablet
+//             }
+
+//             &__search {
+//                 width: 15rem;
+//                 margin-right: $px24;
+//                 margin-bottom: 0; // Remove the margin bottom for tablet
+//             }
+
+//             &__upload-btn {
+//                 width: 10rem; // Width adjusted for tablet
+//                 order: 2; // Order changed for tablet
+//                 margin-right: $px24;
+//             }
+
+//             &__user-pic {
+//                 order: 0; // Reset order for tablet
+//                 margin: 0;
+//                 @include large-user-pic;
+//             }
+//         }
+//     }
+
+//     @include tablet-bp {
+//         flex-direction: row;
+//         justify-content: space-between;
+//         padding-top: 0;
+//         padding-bottom: 0;
+//         @include tablet-padding-x;
+//     }
+
+//     @include desktop-bp {
+//         @include desktop-padding-x;           
+//     }
+// }

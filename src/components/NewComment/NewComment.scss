@@ -47,7 +47,7 @@
     }
   }
   .comment-button {
-    @include large-font-body;
+    @include small-font-label;
     height: $px40;
     width: 100%;
     border: none;
@@ -55,6 +55,7 @@
     border-radius: 4px;
     color: $white;
     position: relative;
+    cursor: pointer;
     @include tablet-bp {
       width: $px160;
       flex-shrink: 0;

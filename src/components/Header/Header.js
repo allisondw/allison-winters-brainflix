@@ -12,18 +12,18 @@ const Header = () => {
         <img src={Logo} alt="Brainflix Logo" className="header__logo--img" />
       </Link>
       <div className="header__div">
-        <div className="header__div--form-div">
+        <div className="header__form-div">
           <form>
             <input
               type="text"
-              className="header__div--search"
+              className="header__search"
               name="search"
               id="search"
               placeholder="Search"
             />
           </form>
         </div>
-        <button className="header__div--upload-btn">
+        <button className="header__upload-btn">
           <Link to="/upload" className="header__link--upload">
             <img src={Upload} alt="upload" className="upload-btn-svg" />
             UPLOAD
@@ -31,7 +31,7 @@ const Header = () => {
         </button>
         <img
           src={User}
-          className="header__div--user-pic"
+          className="header__user-pic"
           alt="mohan user pic"
         />
       </div>

@@ -16,19 +16,19 @@ const UserComments = ({ comments }) => {
     const body = comment.comment;
     const date = formatDate(comment.timestamp);
     return (
-      <section className="comments__posted">
-        <article className="comments__posted--card">
-          <div className="comments__posted--left">
-            <div className="comments__posted--user-img">
-              <img src="/" alt="user profile image"></img>
+      <section className="comments-posted">
+        <article className="comments-posted__card">
+          <div className="comments-posted__left">
+            <div className="comments-posted__user-img">
+              <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="user profile"></img>
             </div>
           </div>
-          <div className="comments__posted--right">
-            <div className="comments__posted--top">
-              <div className="comments__posted--name">{name}</div>
-              <div className="comments__posted--date">{date}</div>
+          <div className="comments-posted__right">
+            <div className="comments-posted__top">
+              <div className="comments-posted__name">{name}</div>
+              <div className="comments-posted__date">{date}</div>
             </div>
-            <div className="comments__posted--body">{body}</div>
+            <div className="comments-posted__body">{body}</div>
           </div>
         </article>
       </section>

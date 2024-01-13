@@ -121,6 +121,7 @@
         flex-direction: column;
         border-top: 1px solid transparent;
         position: relative;
+ 
         &--publish {
             margin: $px16 0;
             @include small-font-label;
@@ -131,6 +132,7 @@
             border-radius: $px4;
             border-style: none;
             position: relative;
+            cursor: pointer;
             .upload-btn-svg {
                 position: absolute;
                 top: $px8;
@@ -150,6 +152,7 @@
             border: none;
             background-color: transparent;
             color: $brainflix-blue;
+            cursor: pointer;
             @include small-font-label;
             @include tablet-bp {
                 width: $px160;
@@ -176,5 +179,6 @@
             left: $px4;
             top: $px4;
         }
-    }  
+    }
 }
+

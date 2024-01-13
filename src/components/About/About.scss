@@ -3,98 +3,96 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mediaqueries" as *;
 
-.hero {
-    &__details {
-        @include mobile-padding-x;
-        
-        &--title {
-            @include small-font-header;
-            @include tablet-bp {
-                @include large-font-header;
-                margin-top: $px24;
-                margin-bottom: 0;
-            }
-            @include desktop-bp {
-                padding: $px32 0 0 0;
-                margin: 0;
-            }
-        }
-        &-div {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            span {
-                @include small-font-sec;
-            }
-            &--left {
-                @include vid-details-mobile;
-                @include tablet-bp {
-                    @include vid-details-tablet;
-                }
-                @include desktop-bp {
-                    padding: 0;
-                }
-            }
-            &--right {
-                @include vid-details-mobile;
-                @include tablet-bp {
-                    @include vid-details-tablet;
-                    justify-content: right;
-                }
-                @include desktop-bp {
-                    padding: 0 $px16 0 0;
-                }
-            }
-            &--channel {
-                @include small-font-sub;
-                margin: $px12 0 0;
-                @include tablet-bp {
-                    @include large-font-sub;
-                    margin-right: $px32;
-                }
-            }
-            &--views {
-                display: flex;
-                justify-content: baseline;
-                padding-top: $px12;
-                &-svg {
-                    padding-right: $px8;
-                }
-            }
-            &--likes {
-                display: flex;
-                justify-content: baseline;
-                padding-top: $px12;
-            }
-           
-            &--likes-svg {
-                padding: 0 $px8 0 $px2;
-                @include tablet-bp {
-                    padding-left: $px32;
-                }
-            }
-            &--timestamp {
-                padding: $px12 0;
-            }
-            @include tablet-bp {
-                justify-content: right;
-            }
-        }
-        &--description {
-            @include small-font-body;
-            @include tablet-bp {
-                @include large-font-body;
-            }
-            @include desktop-bp {
-                padding: 0 $px16 0 0;
-            }
-        }
-        @include tablet-bp {
-            @include tablet-padding-x;
-        }
-        @include desktop-bp {
-            margin-left: $px136;
-            padding: 0;
-        }
-    }   
+.hero-details {
+  @include mobile-padding-x;
+  &__title {
+    @include small-font-header;
+    @include tablet-bp {
+      @include large-font-header;
+      margin-top: $px24;
+      margin-bottom: 0;
+    }
+    @include desktop-bp {
+      padding: $px32 0 0 0;
+      margin: 0;
+    }
+  }
+  &__div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    span {
+      @include small-font-sec;
+    }
+  }
+  &__left {
+    @include vid-details-mobile;
+    @include tablet-bp {
+      @include vid-details-tablet;
+    }
+    @include desktop-bp {
+      padding: 0;
+    }
+  }
+  &__right {
+    @include vid-details-mobile;
+    @include tablet-bp {
+      @include vid-details-tablet;
+      justify-content: right;
+    }
+    @include desktop-bp {
+      padding: 0 $px16 0 0;
+    }
+  }
+  &__channel {
+    @include small-font-sub;
+    margin: $px12 0 0;
+    @include tablet-bp {
+      @include large-font-sub;
+      margin-right: $px32;
+    }
+  }
+  &__views {
+    display: flex;
+    justify-content: baseline;
+    padding-top: $px12;
+    &-svg {
+      padding-right: $px8;
+    }
+  }
+  &__likes {
+    display: flex;
+    justify-content: baseline;
+    padding-top: $px12;
+  }
+
+  &__likes-svg {
+    padding: 0 $px8 0 $px2;
+    @include tablet-bp {
+      padding-left: $px32;
+    }
+  }
+  &__timestamp {
+    padding: $px12 0;
+  }
+  @include tablet-bp {
+    justify-content: right;
+  }
+  &__description {
+    @include small-font-body;
+    @include tablet-bp {
+      @include large-font-body;
+    }
+    @include desktop-bp {
+      padding: 0 $px16 0 0;
+    }
+  }
+  
+  @include tablet-bp {
+    @include tablet-padding-x;
+  }
+  @include desktop-bp {
+    margin-left: $px136;
+    padding: 0;
+  }
 }

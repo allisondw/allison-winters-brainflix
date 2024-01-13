@@ -24,17 +24,17 @@
 }
 
 @mixin font-reg {
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
     font-weight: 300;
 }
 
 @mixin font-bold {
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
     font-weight: bold;
 }
 
 @mixin font-demi {
-    font-family: 'Avenir', sans-serif;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
     font-weight: 400; 
 }
 
@@ -51,7 +51,7 @@
 }
 
 @mixin small-font-label {
-    @include font-bold;
+    @include font-demi;
     text-transform: uppercase;
     font-size: $px12;
     line-height: $px20;

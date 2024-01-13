@@ -3,39 +3,39 @@
 @use "../../styles/partials/fonts" as *;
 @use "../../styles/partials/mediaqueries" as *;
 
-.comments__posted {
+.comments-posted {
     display: flex;
     flex-direction: column;
-    &--card {
+    &__card {
         width: 100%;
         display: flex;
         border-top: 1px solid $mercury;
         padding: $px16;
     }
-    &--user-img {
+    &__user-img {
         @include small-user-pic;
         @include tablet-bp {
             @include large-user-pic;
         }
     }
-    &--top {
+    &__top {
         display: flex;
         justify-content: space-between;
         width: 100%;
         padding-left: $px16;
     }
-    &--name {
+    &__name {
         @include small-font-sub;
         justify-content: left;
         width: 50%;
     }
-    &--date {
+    &__date {
         @include small-font-sec;
         width: auto;
         padding: 0;
         justify-content: right;
     }
-    &--body {
+    &__body {
         @include small-font-body;
         width: 100%;
         padding: $px8 0 0 $px16;
